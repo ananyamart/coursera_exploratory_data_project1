@@ -1,6 +1,6 @@
 
-setwd("C:\\Users\\ANANYA\\Downloads\\coursera\\exploratory data analysis\\project")
-data <- "./1/household_power_consumption.txt"
+
+data <- "household_power_consumption.txt"
 r<- read.table(data, header=TRUE, sep=";", stringsAsFactors=FALSE, dec=".")
 read <- subset(r,grepl("^[1|2].2.2007", r$Date)== TRUE)
 globalActivePower <- as.numeric(read$Global_active_power)
